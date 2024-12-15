@@ -1,1 +1,7 @@
-# hugo-theme-cleanit
+# Theme Name
+
+## Features
+
+## Installation
+
+## Configuration
