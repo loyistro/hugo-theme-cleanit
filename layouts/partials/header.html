@@ -1,7 +1,8 @@
-<h1>{{ $.Site.Title }}</h1>
-
-{{- if $.Site.Params.themeConfig.showSiteDescription }}
-  {{- if $.Site.Params.themeConfig.siteDescription }}
-    {{ $.Site.Params.themeConfig.siteDescription }}
-  {{- end }}
-{{- end }}
+<header>
+	<h1>{{ $.Site.Title }}</h1>
+		{{- if $.Site.Params.themeConfig.showSiteDescription }}
+  			{{- if $.Site.Params.themeConfig.siteDescription }}
+    			{{ $.Site.Params.themeConfig.siteDescription }}
+  			{{- end }}
+		{{- end }}
+</header>
