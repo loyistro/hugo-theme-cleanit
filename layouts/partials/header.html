@@ -1,8 +1,10 @@
 <header>
   <h1>{{ $.Site.Title }}</h1>
-    {{- if $.Site.Params.themeConfig.showSiteDescription }}
-      {{- if $.Site.Params.themeConfig.siteDescription }}
-        {{ $.Site.Params.themeConfig.siteDescription }}
-      {{- end }}
+
+  {{- if $.Site.Params.themeConfig.showSiteDescription }}
+    {{- with $.Site.GetPage "page" "description" }}
+      <p>{{ .Params.description }}</p>
+      <div>{{ .Content }}</div>
     {{- end }}
+  {{- end }}
 </header>
