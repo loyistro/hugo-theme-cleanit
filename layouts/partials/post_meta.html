@@ -1,0 +1,12 @@
+{{ if .IsPage }}
+  <p datetime="{{ .Date }}" class="post_meta">
+    {{ .Date | time.Format site.Params.themeConfig.dateFormat }}
+    {{ if .Params.tags }}
+      | 
+      {{ range $index, $tag := .Params.tags }}
+        {{ if $index }}{{ " | " }}{{ end }}
+        <a href="{{ "/tags/" | relURL }}{{ $tag | urlquery }}">#{{ $tag }}</a>
+      {{ end }}
+    {{ end }}
+  </p>
+{{ end }}
