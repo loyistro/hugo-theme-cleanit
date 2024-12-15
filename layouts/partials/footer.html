@@ -1,11 +1,6 @@
 <footer id="footer">
   <div class="footer_copyright">
-    &copy; {{ now.Year }} 
-      {{ if .Site.Copyright }} 
-        {{ print .Site.Copyright | markdownify }} 
-      {{ else }} 
-      	{{ print .Site.Title }} 
-      {{ end }}
+    &copy; {{ now.Year }} {{ print .Site.Title }} 
   </div>
     
   <div class="footer_menu">
