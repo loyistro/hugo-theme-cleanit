@@ -9,12 +9,11 @@
   </div>
     
   <div class="footer_menu">
-    <nav>
-      <ul>
-        {{ range .Site.Menus.main }} 
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ range $index, $item := site.Menus.main }}
+      <a href="{{ $item.URL }}" {{ with $item.Params.class }} class="{{ . }}" {{ end }}>{{ $item.Name }}</a>
+        {{ if ne (add $index 1) (len site.Menus.main) }}
+        |
         {{ end }}
-      </ul>
-    </nav>
+    {{ end }}
   </div>
 </footer>
