@@ -1,7 +1,20 @@
-{{ if site.Params.themeConfig.showFooter }}
-  <p>
+<footer id="footer">
+  <div class="footer_copyright">
     &copy; {{ now.Year }} 
-    <a href="{{ "/" | relURL }}">{{ site.Title }}</a> · 
-      Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>
-  </p>
-{{ end }}
+      {{ if .Site.Copyright }} 
+        {{ print .Site.Copyright | markdownify }} 
+      {{ else }} 
+      	{{ print .Site.Title }} 
+      {{ end }}
+  </div>
+    
+  <div class="footer_menu">
+    <nav>
+      <ul>
+        {{ range .Site.Menus.main }} 
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</footer>

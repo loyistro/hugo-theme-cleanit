@@ -10,13 +10,50 @@ h1 {
     margin: 0.83em 0 0 0; 
 }
 
-footer {
+#footer {
+  margin-bottom: 10px;
   text-align: center;
   font-size: 12px;
-  line-height: 1;
-  margin-bottom: 20px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+    padding: 0 10px; /* 使用统一间距 */
+    border-right: 2px solid;
+    line-height: 14px; 
+  }
+
+  li:last-child {
+    margin-right: 0;
+    border-right: 0;
+  }
+
+  .footer_copyright,
+  .footer_menu {
+    line-height: 34px;
+  }
 }
 
+@media (min-width: 39rem) {
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* 媒体查询中的更大间距 */
+
+    .footer_copyright {
+      align-self: flex-start;
+    }
+    .footer_menu {
+      align-self: flex-end;
+    }
+  }
+}
 a {
   text-decoration: underline; 
   &:hover { text-decoration: underline; } 
