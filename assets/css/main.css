@@ -19,6 +19,8 @@ footer {
 }
 
 a {
-  color: #00e;
-  text-decoration: none;
+  text-decoration: underline; 
+  &:hover { text-decoration: underline; } 
+  text-decoration-color: red;
+  text-underline-offset: 4px;
 }
