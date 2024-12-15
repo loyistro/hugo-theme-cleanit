@@ -23,7 +23,7 @@ h1 {
   
   li {
     display: inline-block;
-    padding: 0 10px; /* 使用统一间距 */
+    padding: 0 10px;
     border-right: 2px solid;
     line-height: 14px; 
   }
@@ -44,7 +44,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px; /* 媒体查询中的更大间距 */
+    margin-bottom: 20px;
 
     .footer_copyright {
       align-self: flex-start;
