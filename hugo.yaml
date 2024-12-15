@@ -19,4 +19,7 @@ module:
 
 params:
   themeConfig:
-    showFooter: true
+    showSiteDescription: true
+    siteDescription: 'Welcome!'
+    dateFormat: '2006/01/01'
+  google_analytics_id: "YOUR ID"
