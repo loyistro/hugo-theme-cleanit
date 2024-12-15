@@ -29,3 +29,21 @@ a {
   font-size: 13px;
   line-height: 0.2;
 }
+
+hr {
+  --slash-content: '/////'; /* Define slash style */
+  text-align: center;
+  border: 1px; 
+  margin: 1rem 0; 
+  color: gray;
+  
+  /* Insert a slash before <hr> */
+  &:before {
+    content: var(--slash-content);
+  }
+
+  /* Insert a slash after <hr> */
+  &:after {
+    content: var(--slash-content);
+  }
+}
