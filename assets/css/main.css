@@ -1,5 +1,4 @@
 body {
-  color: #222;
   font-family: sans-serif;
   line-height: 1.5;
   margin: 1rem;
@@ -85,4 +84,10 @@ hr {
   &:after {
     content: var(--slash-content);
   }
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
